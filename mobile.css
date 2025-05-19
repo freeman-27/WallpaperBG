@@ -1,6 +1,7 @@
 .collapsingButton{
     /* background: rgb(61, 65, 54); */
-    background-color: #6ea7ce;
+    /* background-color: #6ea7ce; */
+    border-bottom: 1px solid rgb(117, 117, 117);
 
 }
 .collapsibleContentMobile{

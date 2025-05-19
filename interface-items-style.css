@@ -1,0 +1,7 @@
+#left, #mid, #right{
+    transition-duration: 2s;
+    /* width: default; */
+}
+#mid{
+    background: var(--bs-tertiary-color);
+}

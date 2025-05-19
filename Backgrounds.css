@@ -1,0 +1,8 @@
+:root{
+    --StartBG: url("img/forBlurBackground_sized_Cobalt.png");
+}
+.mainBGImg{
+    background-image: var(--StartBG);
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+}

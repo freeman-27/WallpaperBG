@@ -10,11 +10,31 @@
     background-position: center;
     rotate: 180deg;
 }
-.arrowBottom{
+.arrowRight{
     background-color: transparent;
     background-image: var(--ArrowLeftT1) !important;
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;
+    rotate: 0deg;
+}
+.arrowBottom{
+    background-color: transparent;
+    background-image: var(--ArrowLeftT1) !important;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
     rotate: 270deg;
+    padding: 10px 10px 10px 10px !important;
+    border: 0;
+}
+.arrowTop{
+    background-color: transparent;
+    background-image: var(--ArrowLeftT1) !important;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    rotate: 90deg;
+    padding: 10px 10px 10px 10px !important;
+    border: 0;
 }
