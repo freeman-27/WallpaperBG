@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- custom links -->
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="arrowsStyles.css">
+    <title>Background Generator</title>
+</head>
+<body class=""  style="background: var(--bs-secondary-bg);">
+    <div id="HeaderBlock" class="container-fluid text-center">
+    <h1>Background Generator</h1>
+    <!-- <p>Background Generator</p> -->
+    </div>  
+    <div id="AppContainer">
+        <div class="d-flex w-100">
+            <!--Left Block-->
+            <button class="btn collapsingButton arrowLeft" style="position: absolute; left: 0; block-size: 90%; width: 5px;">L-</button>
+            <div id="left" class="w-25"><div class="border border-1 fs-5" style="transition-duration: 2s;">LeftPanel</div>
+                <span class="ms-md-5">Size Selection:</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+ 
+                <div class="d-none d-flex justify-content-center collapsibleContentMobile">
+                    <div class="d-flex">
+                        <div class="imageSize">Size 1</div><input type="radio">
+                        <div class="imageSize">Size 2</div><input type="radio">
+                        <div class="imageSize">Size 3</div><input type="radio">   
+                    </div>
+                    <br><button class="btn btn-secondary">Confirm</button>
+                </div>
+                
+                <hr>
+                <span class="ms-md-5">BG-Type Selection:</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                <div class="d-none d-flex flex-column border border-1 collapsibleContentMobile">
+                    <div class="w-100 d-flex">
+                        <ul class="d-flex flex-column">Items 
+                            <div class="itemForBG"><input type="radio">Modifier 1</div>
+                            <div class="itemForBG"><input type="radio">Modifier 2</div>
+                            <div class="itemForBG"><input type="radio">Modifier 3</div>
+                        </ul>
+                        <div class="w-50" style="left: 10%; position: relative;">ImagePreview:<div class="w-100 border border-dark" style="block-size: 150px; position: relative;"></div></div>
+                    </div>    
+                        <br><button class="btn btn-secondary">Confirm</button>
+                </div>
+                <hr>
+                <span class="ms-md-5">Items Selection:</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                <div class="d-none border border-1 collapsibleContentMobile">Items 
+                    <ul class="d-flex flex-column">
+                        <div class="itemForBG"><input type="radio">T1</div>
+                        <div class="itemForBG"><input type="radio">T2</div>
+                        <div class="itemForBG"><input type="radio">T3</div>
+                    </ul>
+                    <br><button class="btn btn-secondary">Confirm</button>
+                </div>
+                <hr>
+                <span class="ms-md-5">Modifiers Selection:</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                <div class="d-none border border-1 collapsibleContentMobile">Items 
+                    <ul class="d-flex flex-column">
+                        <div class="itemForBG"><input type="radio">Modifier 1</div>
+                        <div class="itemForBG"><input type="radio">Modifier 2</div>
+                        <div class="itemForBG"><input type="radio">Modifier 3</div>
+                    </ul>
+                <button class="btn btn-secondary">Confirm</button>
+                </div>
+                <hr>
+            </div>
+            <!--Middle Block-->
+            <div id="mid" class="container-fluid w-100 mx-3 px-md-5 text-center collapsibleMobile"><div class="border border-1 fs-5" style="transition-duration: 2s;">OutputImage</div>
+                <button class="btn collapsingButton">inf</button>
+                <div class="text-center border">
+                    <p class="">Main label container</p>
+                    <p class="">string 1</p>
+                    <p class="">string 2</p>
+                </div>
+                <hr>
+                <div class="border border-1">ImageContainer</div><div class="border border-dark" style="block-size: 500px;"></div>
+                <button type="button" onclick="GenerateImage()" class="btn btn-secondary">Main</button>
+            </div>
+            <!--Right Block-->
+            <button class="btn collapsingButton" style="position: absolute; right: 0; block-size: 90%; width: 5px;">R-</button>
+            <div id="right" class="w-25"><div class="border border-1 fs-5">RightPanel</div>
+                <span>Color Selecttion:</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                <div class="d-none d-flex justify-content-center collapsibleContentMobile">
+                    <input id="rChannelSelect" type="color" value="#ff0000" oninput="SetRed()">
+                    <input id="gChannelSelect" type="color" value="#00ff00">
+                    <input id="bChannelSelect" type="color" value="#0000ff">
+                    <button onclick="saveColors()" class="btn btn-secondary">Confirm</button>
+                </div>
+                <hr>
+                <span>Text on image:</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                <div class="d-none border border-1 collapsibleContentMobile">
+                    <textarea name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
+                    <br><button class="btn btn-secondary">Confirm</button>
+                </div>
+                <hr>
+                <span>ImagePreview</span>
+                <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                <div class="d-none border border-1 collapsibleContentMobile">
+                    <div class="w-50 border border-dark" style="block-size: 150px; left: 25%; position: relative;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!-- custom scripts -->
+    <script src="MainGenerateFunction.js" type="text/javascript"></script>
+    <script src="collapsible-items.js" type="text/javascript"></script>
+</body>
+</html>

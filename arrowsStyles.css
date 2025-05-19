@@ -1,0 +1,20 @@
+:root{
+    --ArrowLeftT1: url('img/ArrowLeft.svg');
+}
+
+.arrowLeft{
+    background-color: transparent;
+    background-image: var(--ArrowLeftT1) !important;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    rotate: 180deg;
+}
+.arrowBottom{
+    background-color: transparent;
+    background-image: var(--ArrowLeftT1) !important;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    rotate: 270deg;
+}

@@ -1,0 +1,21 @@
+.collapsingButton{
+    /* background: rgb(61, 65, 54); */
+    background-color: #6ea7ce;
+
+}
+.collapsibleContentMobile{
+    background: yellowgreen;
+    /* display: none;
+    overflow: hidden; */
+}
+
+.active{
+    background-color: #6ea7ce;
+    /* background-color: #555555; */
+}
+
+
+.CollapseWidth{
+    width: 0;
+    transition-duration: 2s;
+}
