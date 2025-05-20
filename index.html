@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="interface-items-style.css">
     <link rel="stylesheet" href="Backgrounds.css">
+    <link rel="stylesheet" href="ButtonsRestyle.css">
     <link rel="stylesheet" href="arrowsStyles.css">
     <title>Background Generator</title>
 </head>
-<body class=""  style="overflow: hidden; background: var(--bs-secondary-bg);">
+<body class=""  style="overflow: scroll; background: var(--bs-secondary-bg);">
     <div id="HeaderBlock" class="container-fluid text-center">
     <h1>Background Generator</h1>
     <!-- <p>Background Generator</p> -->
@@ -21,11 +22,11 @@
         <div class="d-md-flex w-100">
             <!--Left Block-->
             <button class="btn bg-light collapsingButton arrowLeft" style="position: absolute; left: 0; block-size: 90%; width: 5px;"><span class="d-none">L-</span></button>
-            <div id="left" class="d-none container w-md-100 w-lg-50 w-25 bg-secondary"><div class="border border-1 fs-5 ms-md-5 collapsibleContentMobile" style="transition-duration: 2s;">LeftPanel</div>
+            <div id="left" class="dd-none container w-md-100 w-lg-50 w-25 bg-secondary"><div class="border border-1 fs-5 ms-md-5 collapsibleContentMobile" style="transition-duration: 2s;">LeftPanel</div>
                 <div class="">
                     <div class="collapsingButton">
                         <span class="ms-md-5">Size Selection:</span>
-                        <button class="btn btn-primary collapsingButton border border-0 border-dark rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                        <button class="btn collapsingButton border border-0 border-dark rounded-circle arrowBottom"><span class="d-none">=</span></button>
                     </div>
                         <div class="d-none d-flex justify-content-center collapsibleContentMobile">
                             <div class="d-flex ms-md-5">
@@ -33,49 +34,190 @@
                                 <div class="imageSize">Size 2</div><input type="radio">
                                 <div class="imageSize">Size 3</div><input type="radio">   
                             </div>
-                            <br><button class="btn btn-secondary">Confirm</button>
+                            <br><button class="btn btn-secondary btnRestyleDark">Confirm</button>
                         </div>
                         <!-- <hr> -->
                         <div class="collapsingButton">
                             <span class="ms-md-5">BG-Type Selection:</span>
                             <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
                         </div>
-                        <div class="d-none d-flex flex-column border border-1 collapsibleContentMobile">
+                        <div class="dd-none d-flex flex-column border border-1 collapsibleContentMobile">
                             <div class="w-100 d-flex">
+                                <form action="">
                                 <ul class="d-flex flex-column">Items 
-                                    <div class="itemForBG"><input type="radio">Modifier 1</div>
-                                    <div class="itemForBG"><input type="radio">Modifier 2</div>
-                                    <div class="itemForBG"><input type="radio">Modifier 3</div>
+                                    <div class="itemForBG"><input id="" type="radio">BG Modifier 1</div>
+                                    <div class="itemForBG"><input id="" type="radio">BG Modifier 2</div>
+                                    <div class="itemForBG"><input id="" type="radio">BG Modifier 3</div>
                                 </ul>
-                                <div class="w-50" style="left: 10%; position: relative;">ImagePreview:<div class="w-100 border border-dark" style="block-size: 150px; position: relative;"></div></div>
+                                </form>
+                                <div class="w-50" style="left: 12%; position: relative;">ImagePreview:<div id="imagePrevContainer" class="w-100 border border-dark" style="block-size: 150px; position: relative;"></div></div>
                             </div>    
-                                <br><button class="btn btn-secondary">Confirm</button>
+                                <div class="ms-md-5"><button class="btn btn-secondary btnRestyleDark">Confirm</button></div>
                         </div>
-                        <!-- <hr> -->
+<!-- <hr> ============================================================================================================================== -->
                         <div class="collapsingButton">
-                            <span class="ms-md-5">Items Selection:</span>
+                            <span class="ms-md-5">Few Shape Selection:</span>
                             <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
                         </div>
-                        <div class="d-none border border-1 collapsibleContentMobile">Items 
-                            <ul class="d-flex flex-column">
-                                <div id="circleShapeItem" class="itemForBG" itemType="circle"><input type="radio">T1</div>
-                                <div id="triangleShapeItem" class="itemForBG" itemType="triangle"><input type="radio">T2</div>
-                                <div id="rotatedSquareShapeItem" class="itemForBG" itemType="rotatedSquare"><input type="radio">T3</div>
-                            </ul>
-                            <br><button class="btn btn-secondary">Confirm</button>
+                        <div class="dd-none border border-1 collapsibleContentMobile"><span class="ms-md-5">Items </span>
+                            <div class="w-100 d-flex">
+                                <form>
+                                    <fieldset>
+                                        <ul id="ShapesList" class="d-flex flex-column">                        
+                                            <div id="circleShapeItem" class="itemForBG" >
+                                                <input 
+                                                    id="inputCircle" 
+                                                    name=""
+                                                    class="" 
+                                                    type="checkbox" 
+                                                    shape-type="circle" 
+                                                    value="circle" 
+                                                    onclick="showPreviewShape(Type = 1)"
+                                                >circle
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="inputCircle">add circle</label>
+                                            <div id="triangleShapeItem" class="itemForBG" >
+                                                <input 
+                                                    id="inputTriangle" 
+                                                    name=""
+                                                    class="" 
+                                                    type="checkbox" 
+                                                    shape-type="triangle" 
+                                                    value="triangle" 
+                                                    onclick="showPreviewShape(Type = 2)"
+                                                >triangle
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="inputTriangle">add triangle</label>
+                                            <div id="squareShapeItem" class="itemForBG">
+                                                <input 
+                                                    id="inputSquare" 
+                                                    name=""
+                                                    class="" 
+                                                    type="checkbox" 
+                                                    shape-type="square" 
+                                                    value="square" 
+                                                    onclick="showPreviewShape(Type = 3)"
+                                                >square
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="inputSquare">add square</label>
+                                            <div id="rotatedSquareShapeItem" class="itemForBG">
+                                                <input 
+                                                    id="inputRotatedSquare" 
+                                                    name=""
+                                                    class="" 
+                                                    type="checkbox" 
+                                                    shape-type="rotatedSquare" 
+                                                    value="rotatedSquare" 
+                                                    onclick="showPreviewShape(Type = 4)"
+                                                >rotated square
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="inputRotatedSquare">add rt.square</label>
+                                            <div id="emptyShapeItem" class="itemForBG" >
+                                                <input 
+                                                    id="inputEmptyShape" 
+                                                    name=""
+                                                    class="" 
+                                                    type="reset" 
+                                                    shape-type="empty" 
+                                                    value="Сброс" 
+                                                    onclick="showPreviewShape(Type = 5)"
+                                                >R
+                                            </div>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <div class="w-50" style="left: 5%; position: relative;">ImagePreview:<div id="imageShapePrevContainer-01" class="w-100 border border-dark d-flex justify-content-center align-items-center" style="flex-wrap: wrap; block-size: 150px; position: relative; max-width: 200px;"><div id="outputShapeExample"></div></div></div>
+                            </div>
+                            <div class="ms-md-5"><button class="btn btn-success btnRestyleDark">Confirm</button></div>
                         </div>
-                        <!-- <hr> -->
+<!-- <hr> ============================================================================================================================== -->
+                        <div class="collapsingButton">
+                            <span class="ms-md-5">One Type Shape Selection:</span>
+                            <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
+                        </div>
+                        <div class="dd-none border border-1 collapsibleContentMobile"><span class="ms-md-5">Items </span>
+                            <div class="w-100 d-flex">
+                                <form>
+                                    <fieldset>
+                                        <ul id="ShapesList2" class="d-flex flex-column">
+                                            <div id="ForCircleShapeItem" class="itemForBG" >
+                                                <input 
+                                                    id="radio-inputCircle" 
+                                                    name=""
+                                                    class="" 
+                                                    type="radio" 
+                                                    shape-type="circle" 
+                                                    value="circle" 
+                                                    onclick="SwitchShape_RadioBtn(Shape = 1)"
+                                                >circle
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="radio-inputCircle">add circle</label>
+                                            <div id="ForTriangleShapeItem" class="itemForBG" >
+                                                <input 
+                                                    id="radio-inputTriangle" 
+                                                    name=""
+                                                    class="" 
+                                                    type="radio" 
+                                                    shape-type="triangle" 
+                                                    value="triangle" 
+                                                    onclick="SwitchShape_RadioBtn(Shape = 2)"
+                                                >triangle
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="radio-inputTriangle">add triangle</label>
+                                            <div id="ForSquareShapeItem" class="itemForBG">
+                                                <input 
+                                                    id="radio-inputSquare" 
+                                                    name=""
+                                                    class="" 
+                                                    type="radio" 
+                                                    shape-type="square" 
+                                                    value="square" 
+                                                    onclick="SwitchShape_RadioBtn(Shape = 3)"
+                                                >square
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="radio-inputSquare">add square</label>
+                                            <div id="ForRotatedSquareShapeItem" class="itemForBG">
+                                                <input 
+                                                    id="radio-inputRotatedSquare" 
+                                                    name=""
+                                                    class="" 
+                                                    type="radio" 
+                                                    shape-type="rotatedSquare" 
+                                                    value="rotatedSquare" 
+                                                    onclick="SwitchShape_RadioBtn(4)"
+                                                >rotated square
+                                            </div>
+                                            <label class="btn btn-success btnRestyleLight" for="radio-inputRotatedSquare">add rt.square</label>
+                                            <div id="ForEmptyShapeItem" class="itemForBG" >
+                                                <input 
+                                                    id="radio-emptyShapeItem" 
+                                                    name=""
+                                                    class="" 
+                                                    type="reset" 
+                                                    shape-type="empty" 
+                                                    value="emptyShape" 
+                                                    onclick="SwitchShape_RadioBtn(5)"
+                                                >
+                                            </div>
+                                        </ul>
+                                    </fieldset>
+                                </form>
+                                <div class="w-50" style="left: 5%; position: relative;">ImagePreview:<div id="imageShapePrevContainer-02" class="w-100 border border-dark d-flex justify-content-center align-items-center" style="block-size: 150px; position: relative;"><div id="outputShapeExample"></div></div></div>
+                            </div>
+                            <div class="ms-md-5"><button class="btn btn-success btnRestyleDark">Confirm</button></div>
+                        </div>
+<!-- <hr> ============================================================================================================================== -->
                         <div class="collapsingButton">
                             <span class="ms-md-5">Modifiers Selection:</span>
                             <button class="btn collapsingButton rounded-circle arrowBottom"><span class="d-none">=</span></button>
                         </div>
-                            <div class="d-none border border-1 collapsibleContentMobile">Items 
+                            <div class="dd-none border border-1 collapsibleContentMobile">Items 
                                 <ul class="d-flex flex-column">
                                     <div class="itemForBG"><input type="radio">Modifier 1</div>
                                     <div class="itemForBG"><input type="radio">Modifier 2</div>
                                     <div class="itemForBG"><input type="radio">Modifier 3</div>
                                 </ul>
-                            <button class="btn btn-secondary">Confirm</button>
+                            <div class="ms-md-5"><button class="btn btn-secondary btnRestyleDark">Confirm</button></div>
                             </div>
                         <!-- <hr> -->
                 </div>
@@ -93,9 +235,25 @@
                 </div>
                 <!-- <hr> -->
                 OutputImage
-                <div class="border border-1">ImageContainer</div><div id="imageOutputContainer" class="border border-secondary mainBGImg" style=" position: relative; left: 12.5%; width: 75%; block-size: 400px;"></div>
-                <button type="button" onclick="GenerateImage()" class="btn btn-secondary">Main</button>
+                <div class="border border-1">ImageContainer</div><div id="imageOutputContainer" class="border border-secondary mainBGImg" style="overflow: hidden; position: relative; left: 12.5%; width: 75%; block-size: 400px;">
+                    <!-- main output container -->
+                </div>
+                <button type="button" onclick="GenerateImage()" class="btn btn-secondary btnRestyleDark">Main</button>
                 <button type="button" onclick="AddPrimitives()" class="btn btn-secondary">Test AddPrimitives()</button>
+                <button type="button" onclick="GetAttr()" class="btn btn-secondary">GetAttr()</button>
+                <button type="button" onclick="showPreviewShape()" class="btn btn-secondary">showPreviewShape()</button>
+                <button type="button" onclick="SwitchCheck()" class="btn btn-secondary">SwitchCheck()</button>
+                <button type="button" onclick="" class="btn btn-secondary">f</button>
+                <button type="button" onclick="RandomPlacementItems()" class="btn btn-secondary">RandomPlacementItems</button>
+                <button type="button" onclick="RandomPlacement4TypesItems()" class="btn btn-secondary">RandomPlacement4TypesItems()</button>
+                <button type="button" onclick="RandomPlacementCircles()" class="btn btn-secondary">Circles</button>
+                <button type="button" onclick="RandomPlacementTriangles()" class="btn btn-secondary">Triangles</button>
+                <button type="button" onclick="RandomPlacementSquares()" class="btn btn-secondary">Squares</button>
+                <button type="button" onclick="RandomPlacementRotatedSquares()" class="btn btn-secondary">RSquares</button>
+                <button type="button" onclick="RandomPlacementVerticalLines()" class="btn btn-secondary">V-lines</button>
+                <button type="button" onclick="RandomPlacementHorisontalLines()" class="btn btn-secondary">H-lines</button>
+                <button type="button" onclick="RandomPlacementMixedItems()" class="btn btn-secondary">MixedShapes</button>
+
 
             </div>
             <!--Right Block-->
@@ -109,7 +267,7 @@
                         <input id="rChannelSelect" type="color" value="#ff0000" oninput="SetRed()">
                         <input id="gChannelSelect" type="color" value="#00ff00">
                         <input id="bChannelSelect" type="color" value="#0000ff">
-                        <button onclick="saveColors()" class="btn btn-secondary">Confirm</button>
+                        <button onclick="saveColors()" class="btn btn-secondary btnRestyleDark">Confirm</button>
                     </div>
                 <!-- <hr> -->
                 <div class="collapsingButton">
@@ -118,7 +276,7 @@
                 </div>
                 <div class="d-none border border-1 collapsibleContentMobile">
                     <textarea name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
-                    <br><button class="btn btn-secondary">Confirm</button>
+                    <br><button class="btn btn-secondary btnRestyleDark">Confirm</button>
                 </div>
                 <!-- <hr> -->
                 <div class="collapsingButton">
@@ -151,6 +309,18 @@
     <!-- custom scripts -->
     <script src="MainGenerateFunction.js" type="text/javascript"></script>
     <script src="collapsible-items.js" type="text/javascript"></script>
-    <script src="AddPRimitivesItemsToBG.js" type="text/javascript"></script>
+
+    <script src="CreateTypesOfShapes.js" type="text/javascript"></script>
+    <!-- <script src="AddPRimitivesItemsToBG.js" type="text/javascript"></script> -->
+    
+    <script src="ShowShapeExample(checkBoxes).js" type="text/javascript"></script>
+    <script src="SwitchShapeExamples(radioBtns).js" type="text/javascript"></script>
+    <script src="AddAllToOutputContainer.js"></script>
+    <script src="AddShapesToBG.js"></script>
+    <script src="AddCirclesToBG.js"></script>
+    <script src="AddTrianglesToBG.js"></script>
+    <script src="AddSquaresToBG.js"></script>
+    <script src="AddRotatedSquaresToBG.js"></script>
+    <script src="AddLinesToBg.js"></script>
 </body>
 </html>

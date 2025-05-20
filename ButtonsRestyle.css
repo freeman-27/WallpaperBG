@@ -1,0 +1,11 @@
+:root{
+    --BtnPrimaryRestyleDark: #173746;
+    --BtnPrimaryRestyleLight: #bee7fa;
+}
+.btnRestyleDark{
+    background: var(--BtnPrimaryRestyleDark);
+}
+.btnRestyleLight{
+    color: #222222;
+    background: var( --BtnPrimaryRestyleLight);
+}
