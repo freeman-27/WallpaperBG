@@ -1,8 +1,20 @@
 :root{
     --StartBG: url("img/forBlurBackground_sized_Cobalt.png");
+    --MainDark: #173746;
+    --MainDark2: #1c0041;
 }
 .mainBGImg{
     background-image: var(--StartBG);
     background-size: cover, cover;
     background-repeat: no-repeat, no-repeat;
+}
+.mainColorDark{
+    background: var(--MainDark) !important;
+    /* rotate: 45deg; */
+    /* transform: rotateX('angle'); */
+}
+.loadingBgColorDark{
+    background: var(--MainDark2) !important;
+    /* rotate: 45deg; */
+    /* transform: rotateX('angle'); */
 }

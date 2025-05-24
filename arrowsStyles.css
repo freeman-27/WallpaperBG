@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: center;
     rotate: 180deg;
+    border-top: 10px solid rgba(0, 0, 250, 0.65);
 }
 .arrowRight{
     background-color: transparent;

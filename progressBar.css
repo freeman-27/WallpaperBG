@@ -1,0 +1,15 @@
+/* <style> */
+#ProgressBarContainer {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#progressBar_line {
+  width: 1%;
+  height: 10px;
+  /* background-color: #78aa04; */
+  background-image: linear-gradient(to right, red, indigo);
+  /* background-image: linear-gradient(to right, red, yellow); */
+  /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
+}
+/* </style> */

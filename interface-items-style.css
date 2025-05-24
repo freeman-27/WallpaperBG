@@ -1,7 +1,72 @@
+
+:root{
+    /* --MainDarkColor: rgb(21, 0, 61); */
+    /* --MainDark: #1c0041; */
+}
+
 #left, #mid, #right{
     transition-duration: 2s;
     /* width: default; */
 }
 #mid{
     background: var(--bs-tertiary-color);
+}
+
+
+.collapsingButton{
+    /* background: rgb(61, 65, 54); */
+    /* background-color: #6ea7ce; */
+    border-bottom: 1px solid rgb(94, 63, 63);
+    transition-duration: 1s;
+}
+.collapsingButton:hover{
+    background-color: var(--MainDark);
+    color: white;
+    transition-duration: 1s;
+}
+.collapsibleContentMobile{
+    /* background: yellowgreen; */
+    background: rgb(134, 134, 141);
+    /* display: none;
+    overflow: hidden; */
+}
+
+.active{
+    background-color: #6ea7ce;
+    /* background-color: #555555; */
+}
+
+
+.CollapseWidth{
+    width: 0;
+    transition-duration: 2s;
+}
+
+#ResolutionOfImageList:hover{
+    background-color: var(--MainDark);
+    color: white;
+}
+#ResolutionOfImageList::placeholder{
+    color: white;
+}
+
+#inputSizeOfTextOnImage{
+    background-color: var(--MainDark);
+}
+
+.ShadowTextLight{
+    text-shadow: 0 0 10px yellowgreen, 0 0 20px white;
+}
+.ShadowTextOnLoading{
+    /* text-shadow: 0 0 10px yellowgreen, 0 0 20px white; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: ShiningText;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ShiningText {
+    0% {text-shadow: 0 0 2px yellowgreen, 0 0 4px white;}
+    50% {text-shadow: 0 0 10px yellowgreen, 0 0 20px white;}
+    100% {text-shadow: 0 0 2px yellowgreen, 0 0 4px white;}
 }

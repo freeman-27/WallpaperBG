@@ -1,11 +1,27 @@
 :root{
     --BtnPrimaryRestyleDark: #173746;
     --BtnPrimaryRestyleLight: #bee7fa;
+    --ReloadImg: url('img/ReloadBtn.png');
 }
+*{
+    /* transition-duration: 2s !important; */
+}
+
 .btnRestyleDark{
     background: var(--BtnPrimaryRestyleDark);
 }
 .btnRestyleLight{
     color: #222222;
     background: var( --BtnPrimaryRestyleLight);
+}
+.gradientOutline{
+  background-image: linear-gradient(to bottom right, red, var(--MainDark2), black) !important;
+  padding: 5px !important;
+}
+
+.btnWithOtline:hover{
+  background-image: linear-gradient(to bottom right, red, var(--MainDark2), black) !important;
+  color: white !important;
+  outline: 4px solid white !important;
+  outline-offset: 2px !important;
 }
