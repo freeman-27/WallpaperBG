@@ -21,6 +21,7 @@ let Random_B
 let Random_A //alpha
 let Random_Adec //alpha
 let RandomColor 
+let RandomColorForTriangle
 
 ////Create and add random elements
 ///
@@ -35,7 +36,7 @@ function RandomPlacement4TypesItems(){
     RandomPlacement = "position: absolute;" + "left:" + random_X + "." + random_Xdec + "%; top:" + random_Y + "." + random_Ydec + "%;"
 
     ///set scale:
-    RandScaleA = Math.floor(Math.random() * 2); //number from 0 to 2
+    RandScaleA = Math.floor(Math.random() * 3) + 1; //number from 1 to 3
     RandScaleB = Math.floor(Math.random() * 99); //number from 0 to 99
     RandomScale = "scale:" + RandScaleA + "." + RandScaleB + ";"; //"scale: 0.5; 1.0, ...." 
 
@@ -47,7 +48,9 @@ function RandomPlacement4TypesItems(){
     Random_A = 0;
     Random_Adec = Math.floor(Math.random() * 999); //number from 0 to 999 
     RandomColor = "background-color: rgba(" + Random_R + "," + Random_G + "," + Random_B + "," + Random_A + "." + Random_Adec + ");"; ///Color: rgba (255, 255, 255, 1)
-    return RandomPlacement, RandomScale, RandomColor
+    RandomColorForTriangle = Random_R + "," + Random_G + "," + Random_B + "," + Random_A + "." + Random_Adec; ///Color: rgba (255, 255, 255, 1)
+
+    return RandomPlacement, RandomScale, RandomColor, RandomColorForTriangle
     }
     let OutputCircleItem = document.createElement('div');
     GenNewValues();
@@ -56,7 +59,9 @@ function RandomPlacement4TypesItems(){
 
     let OutputTriangleItem = document.createElement('div');
     GenNewValues();
-    OutputTriangleItem.setAttribute("style", triangleItemStyleAttr + RandomPlacement + RandomScale + RandomColor);
+    triangleItemStyleAttr = "width: 0; height: 0; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 50px solid rgba(" + RandomColorForTriangle +");";
+    let newTriangleItemStyleAttr;
+    OutputTriangleItem.setAttribute("style", triangleItemStyleAttr + RandomPlacement + RandomScale);
     document.getElementById('imageOutputContainer').appendChild(OutputTriangleItem);
 
     let OutputSquareItem = document.createElement('div');
