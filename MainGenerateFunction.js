@@ -1,32 +1,31 @@
+let HexColorSelection = document.getElementById('HexColorSelect');
 let R_channel = document.getElementById('rChannelSelect');
 let G_channel = document.getElementById('gChannelSelect');
 let B_channel = document.getElementById('bChannelSelect');
-let savedRed;
+let savedColor;
 
-
+////TODO
 function GenerateImage(){
-    let R_channel = document.getElementById('rChannelSelect');
-    let Rval = R_channel.attributes[2].value;
-    // R_channel.
-    // R_channel.addEventListener.call();
-    let Rval1 = R_channel.getAttribute("value");
-    window.alert(Rval);
-    window.alert(savedRed);
+    let HexColorSelection = document.getElementById('HexColorSelect');
+    // let Rval = HexColorSelection.attributes[2].value;
+    // let Rval1 = HexColorSelection.getAttribute("value");
+    // window.alert(Rval);
+    // window.alert(savedColor);
 }
-let setRedRGB;
-function SetRed(){
-    let setRedHex = document.getElementById('rChannelSelect').value;
-    setRedRGB = setRedHex;
-    document.getElementById('rChannelSelect').
-    console.log('R-chanel-2:'+ setRedRGB);
-    return setRedRGB;
+let ColorInput;
+function GetInputHexColor(){
+    let GetInputHexColor = document.getElementById('HexColorSelect').value;
+    ColorInput = GetInputHexColor;
+    document.getElementById('HexColorSelect').
+    console.log('value-2:'+ ColorInput);
+    return ColorInput;
 }
 function saveColors(){
-    savedRed = setRedRGB;
+    savedColor = ColorInput;
     // savedRed = R_channel.attributes[2].value;
-    console.log('Saved-R-chanel:'+ savedRed);
+    console.log('Saved-value:'+ savedColor);
     // console.log('R-chanel:'+ savedRed);
-    return savedRed;
+    return savedColor;
 }
 
 
