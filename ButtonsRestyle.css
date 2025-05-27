@@ -8,7 +8,9 @@
 }
 
 .btnRestyleDark{
-    background: var(--BtnPrimaryRestyleDark);
+  background: var(--BtnPrimaryRestyleDark);
+  outline: 6px solid rgba(255, 255, 255, 0) !important;
+
 }
 .btnRestyleLight{
     color: #222222;
@@ -17,11 +19,42 @@
 .gradientOutline{
   background-image: linear-gradient(to bottom right, red, var(--MainDark2), black) !important;
   padding: 5px !important;
+
+}
+.btnWithOtline{
+  transition-duration: 1s;
 }
 
 .btnWithOtline:hover{
-  background-image: linear-gradient(to bottom right, red, var(--MainDark2), black) !important;
+  /* background-image: linear-gradient(to bottom right, red, var(--MainDark2), black) !important; */
   color: white !important;
-  outline: 4px solid white !important;
-  outline-offset: 2px !important;
+  outline: 6px solid white !important;
+  outline-offset: 0px !important;
+  animation-name: SlowSwitchBG;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  transition-duration: 1s;
+  background-color: rgba(255,255,255, 0);
+}
+
+@keyframes SlowSwitchBG {
+  0%{background: var(--BtnPrimaryRestyleDark);}
+  100%{ background: rgba(255, 255, 255, 0);}
+  /* 0%{background-image: linear-gradient(to bottom right, rgb(255, 255, 255), var(--MainDark2), black) !important;}
+  50%{background-image: linear-gradient(to bottom right, rgba(0, 100, 58, 0.377), var(--MainDark2), black) !important;}
+  100%{ background-image: linear-gradient(to bottom right, red, var(--MainDark2), black) !important;} */
+
+}
+
+.DefaultInputHidden{
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.CustomInputShape{
+  width: 40px;
+  block-size: 40px;
+  background-color: var(--BtnPrimaryRestyleLight);
+  /* border-radius: 50px; */
 }

@@ -10,8 +10,13 @@
 }
 #mid{
     background: var(--bs-tertiary-color);
+    /* background: var(--MainDark);
+    background-color: none !important; */
 }
 
+.PanelDark{
+    background-color: var(--MainDark3) !important;
+}
 
 .collapsingButton{
     /* background: rgb(61, 65, 54); */
@@ -69,4 +74,24 @@
     0% {text-shadow: 0 0 2px yellowgreen, 0 0 4px white;}
     50% {text-shadow: 0 0 10px yellowgreen, 0 0 20px white;}
     100% {text-shadow: 0 0 2px yellowgreen, 0 0 4px white;}
+}
+
+
+.reloadBtn {
+    transition-duration: 1s;
+    rotate: 90deg;
+    /* animation-play-state: paused; */
+}
+.reloadBtn:hover{
+    transition-duration: 1s;
+    /* rotate: 360deg; */
+    animation-name: RotateArrow;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+@keyframes RotateArrow {
+    0% {rotate: 90deg;}
+    100% {rotate: 450deg;}
 }

@@ -1,7 +1,15 @@
 :root{
+    --LoadingBG: url("img/RandomRotatedSquares.PNG");
     --StartBG: url("img/forBlurBackground_sized_Cobalt.png");
     --MainDark: #173746;
+    --MainDarkRgb: rgb(23,55, 70);
     --MainDark2: #1c0041;
+    --MainDark3: #32353b;
+    --CircleItemImg: url('img/CircleItemButtonLightBorder.svg');
+    --SquareItemImg: url('img/SquareItemButtonLightBorder.svg');
+    --RotatedSquareItemImg: url('img/RotatedSquareItemButtonLightBorder.svg');
+    --TriangleItemImg: url('img/TriangleItemButtonLightBorder.svg');
+    --EmptyItemImg: url('img/EmptyItemButton.svg')
 }
 .mainBGImg{
     background-image: var(--StartBG);
@@ -17,4 +25,16 @@
     background: var(--MainDark2) !important;
     /* rotate: 45deg; */
     /* transform: rotateX('angle'); */
+}
+.PresetCard{
+    width: 200px;
+    block-size: 100px;
+    position: relative;
+    /* margin-top: 20px; */
+    margin-left: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
