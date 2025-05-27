@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .RandomColor{
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation-name: ChangeColors;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.RandomOutlineColor{
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation-name: ChangeOutlineColors;
+  animation-duration: 10s;
+  /* animation-iteration-count: 1; */
+  animation-delay: 2s;
+  outline-width: 200px;
+  outline-color:#eeefff00; 
+  outline-style: solid;
+  outline-offset: 250px; 
+}
+.RandomBorderColor{
+  animation-name: ChangeVerticalBordersColors;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  border-style: dotted;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left-width: 6px;
+  border-right-width: 6px;
+  animation-iteration-count: infinite;
+  /* border: 2px solid #eeefff00; */
+}
+
+@keyframes ChangeBorderColors {
+  0%{border-color: white;}
+  12.5%{border-color: indigo;}
+  25%{border-color: blue;}
+  37.5%{border-color: cyan;}
+  50%{border-color: green;}
+  62.5%{border-color: yellow;}
+  75%{border-color: orange;}
+  87.5%{border-color: red;}
+  100%{border-color: white;}
+}
+@keyframes ChangeVerticalBordersColors {
+  0%{border-left-color: white; border-right-color: white;}
+  12.5%{border-left-color: indigo; border-right-color: indigo;}
+  25%{border-left-color: blue; border-right-color: blue;}
+  37.5%{border-left-color: cyan; border-right-color: cyan;}
+  50%{border-left-color: green; border-right-color: green;}
+  62.5%{border-left-color: yellow; border-right-color: yellow;}
+  75%{border-left-color: orange; border-right-color: orange;}
+  87.5%{border-left-color: red; border-right-color: red;}
+  100%{border-left-color: white; border-right-color: white;}
+}
+@keyframes ChangeColors {
+  0%{background-color: white;}
+  12.5%{background-color: indigo;}
+  25%{background-color: blue;}
+  37.5%{background-color: cyan;}
+  50%{background-color: green;}
+  62.5%{background-color: yellow;}
+  75%{background-color: orange;}
+  87.5%{background-color: red;}
+  100%{background-color: white;}
+}
+/* @keyframes ChangeOutlineColors {
+  0%{outline-color: rgba(245, 245, 245, 0.1); outline-width: 50px; outline-offset: 215px;}
+  10%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  17%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  24%{outline-color: var(--MainDark2); outline-width: 100x; outline-offset: 215px;}
+  31%{outline-color: rgba(0, 139, 139, 0.1); outline-width: 50px; outline-offset: 215px;}
+  38%{outline-color: var(--MainDark2); outline-width: 100x; outline-offset: 215px;}
+  45%{outline-color: rgba(0, 128, 0, 0.1); outline-width: 50px; outline-offset: 215px;}
+  52%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  59%{outline-color: rgba(255, 255, 0, 0.1); outline-width: 50px; outline-offset: 215px;}
+  66%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  73%{outline-color: rgba(255, 166, 0, 0.1); outline-width: 50px; outline-offset: 215px;}
+  80%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  87%{outline-color: rgba(255, 0, 0, 0.1); outline-width: 50px; outline-offset: 215px;}
+  94%{outline-color: var(--MainDark2); outline-width: 50px; outline-offset: 215px;}
+  100%{outline-color: rgba(245, 245, 245, 0.1); outline-width: 50px; outline-offset: 215px;}
+} */
+/* @keyframes ChangeOutlineWidth {
+   0%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  10%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  17%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  24%{outline-color: var(--MainDark2); outline-width: 100x; outline-offset: 215px;}
+  31%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  38%{outline-color: var(--MainDark2); outline-width: 100x; outline-offset: 215px;}
+  45%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  52%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  59%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  66%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  73%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  80%{outline-color: var(--MainDark2); outline-width: 100px; outline-offset: 215px;}
+  87%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+  94%{outline-color: var(--MainDark2); outline-width: 50px; outline-offset: 215px;}
+ 100%{outline-color: rgba(0, 0, 255, 0.1); outline-width: 50px; outline-offset: 215px;}
+} */
+@keyframes ChangeOutlineColors {
+  0%{outline-color: whitesmoke;}
+  12.5%{outline-color: var(--MainDark2);}
+  25%{outline-color: blue;}
+  37.5%{outline-color: darkcyan;}
+  50%{outline-color: green;}
+  62.5%{outline-color: yellow;}
+  75%{outline-color: orange;}
+  87.5%{outline-color: red;}
+  100%{outline-color: whitesmoke;}
+}
+/* @keyframes ChangeColorsOutline {
+  0%{background-color: darkorchid;}
+  12.5%{background-color: indigo;}
+  25%{background-color: blue;}
+  37.5%{background-color: darkcyan;}
+  50%{background-color: green;}
+  62.5%{background-color: yellow;}
+  75%{background-color: orange;}
+  87.5%{background-color: red;}
+  100%{background-color: darkorchid;}
+} */
+
+/* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
+    </style>
+</head>
+<body class="RandomBorderColor" style="text-align: center; background-color: black;">
+    <h1 style="color: white;">RandomBorderColor</h1>
+    <div style="block-size: 1000px; "></div>
+</body>
+</html>

@@ -13,6 +13,7 @@ setTimeout(function (){
             clearInterval(id);
             i = 0;
             document.body.classList.replace("loadingBgColorDark", "bg-dark");
+            // document.body.classList.replace("RandomColor", "bg-dark");
             document.getElementById("spinContainer").classList.remove("d-none");
             document.getElementById("ProgressBarContainer").classList.add("d-none");
             document.getElementById("ProgressLoadingContainer").children[1].classList.add("d-none");
@@ -23,6 +24,8 @@ setTimeout(function (){
             width++;
             elem.style.width = width + "%";
             document.body.classList.add("loadingBgColorDark");
+            // document.body.classList.add("RandomColor");
+            document.body.setAttribute("style", "cursor: progress;");
         }
         }
     }
@@ -34,5 +37,6 @@ setTimeout(function (){
 function ShowApplication(){
     document.getElementById("MainContainer").classList.remove("d-none");
     document.getElementById("ProgressLoadingContainer").classList.add("d-none");
+    document.body.setAttribute("style", "cursor: default;");
 }
 //</script>
