@@ -12,8 +12,13 @@
     background: var(--bs-tertiary-color);
     /* background: var(--MainDark);
     background-color: none !important; */
+    /* transform: scaleX(); */
 }
-
+#right{
+    /* align-self: center !important; */
+    position: relative;
+    z-index: 54444405 !important;
+}
 .PanelDark{
     background-color: var(--MainDark3) !important;
 }
@@ -95,3 +100,4 @@
     0% {rotate: 90deg;}
     100% {rotate: 450deg;}
 }
+

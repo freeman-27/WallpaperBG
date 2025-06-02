@@ -16,7 +16,6 @@
     --MixedSquareItemImg: url('img/MixedSquareItemButtonLightBorder.svg');
     --EmptyItemImg: url('img/EmptyItemButton.svg');
     --DestroyImageButton: url('img/DestroyImageButton.svg');
-
 }
 .mainBGImg{
     background-image: var(--StartBG);

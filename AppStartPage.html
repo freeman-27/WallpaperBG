@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="Backgrounds.css">
+    <link rel="stylesheet" href="ButtonsRestyle.css">
+    <title>Wallpaper BG</title>
+    <link rel="shortcut icon" href="img/BG_gener_IconR1.ico" type="image/x-icon">
+
+</head>
+<!-- <body class="bg-dark" style="background: url('https://wmit.online/_Projects/AquaCubeApp/AquaCubeWeb_Proto/img/waves.png') !important; background-size: cover;"> -->
+<body class="bg-dark" style="background: url(img/BackgroundsTemplates/forBlurBackground_sized_Violet.png), rgb(17, 29, 41) !important;
+                            background-size: clamp(60%, 100vw 75%), 60% !important;
+                            background-repeat: no-repeat !important;
+                            background-position-x: 50% !important;
+                            background-position-y: 10% !important;
+                            -webkit-backdrop-filter: blur(10px) !important;
+                            backdrop-filter: blur(10px) !important;"> 
+    <div class="container bg-transparent text-light text-center p-5 mx-auto" style="padding-top: 10em !important;">
+    <div class="text-light fixed-top" style="position: absolute !important; left: 0 !important; top: 20px !important;"><button class="btn text-secondary" onclick="HomePage()">wmit.online</button></div>
+    <img src="img/BG_gener_IconR2.ico" width="50px" height="50px" style="position: relative; /*left: 20%;*/ rotate: 0deg;" alt="IconR2">
+        
+        <h1 class="">Wallpaper BG</h1>
+        <p class="fs-3 mt-5">Веб-приложение для создания фоновых изображений</p>
+        <p class="mt-5">Попробуйте онлайн:</p>
+        <a id="save-button" type="button" onclick="runWallpaperBG()" class="mb-2 btn btn-secondary border-0 gradientOutline p-3 fs-3" style=""><div class="p-2 rounded-1 btnRestyleDark btnWithOtline" style="padding: auto; width: 100% !important; text-decoration: none;">Открыть</div></a>
+        <div class="d-flex justify-content-center animateOnDesktop" style="perspective: 300px; opacity: 0.5;">
+            <div class="text-center mt-5" style="block-size: 20em; position: absolute; transform: rotateX(45deg);"><img class="border" width="300px" src="img/AppView/previewAppWallpaperBG.PNG" alt=""></div>
+        </div>
+        <span class="fixed-bottom" style="top: 150%;">2025</span>
+
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!-- custom scripts -->
+    <script>
+        function runWallpaperBG(){
+            window.open("https://wmit.online/_Projects/WallpaperBG/index.html");
+        }
+        function HomePage(){
+        window.open("https://wmit.online", "_self");
+        }
+    </script>
+</body>
+</html>
