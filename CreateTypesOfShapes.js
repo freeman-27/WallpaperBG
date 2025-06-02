@@ -11,11 +11,26 @@ let squareItemStyleAttr = "height: 50px; width: 50px; background-color: #555;";
 let rotatedSquareItem;
 let rotatedSquareItemStyleAttr = "height: 50px; width: 50px; background-color: #555; rotate: 45deg;";
 
+let mixedSquareItem;
+let mixedSquareItemStyleAttr = "height: 50px; width: 50px; background-color: #ff55aa; rotate: 0deg;";
+
+
 let h_lineItem;
+let h_lineItemStyleAttr = "height: 5px; width: 50px; background-color: #555;";
+
 let v_lineItem;
+let v_lineItemStyleAttr = "height: 50px; width: 5px; background-color: #555;";
+
+let LeftAngleLineItem;
+let LeftAngleLineItemStyleAttr = "height: 5px; width: 50px; background-color: #555; rotate: -45deg;";
+
+let RightAngleLineItem;
+let RightAngleLineItemStyleAttr = "height: 50px; width: 5px; background-color: #555; rotate: 135deg;";
+
+
 
 
 let SavedItem1;
 let itemType;
 
-let = document.getElementById("imagePrevContainer");
+// let Prev = document.getElementById("imagePrevContainer");

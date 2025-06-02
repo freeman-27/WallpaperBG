@@ -9,7 +9,14 @@
     --SquareItemImg: url('img/SquareItemButtonLightBorder.svg');
     --RotatedSquareItemImg: url('img/RotatedSquareItemButtonLightBorder.svg');
     --TriangleItemImg: url('img/TriangleItemButtonLightBorder.svg');
-    --EmptyItemImg: url('img/EmptyItemButton.svg')
+    --H_lineItemImg: url('img/H-LineItemButton.svg');
+    --V_lineItemImg: url('img/V-LineItemButton.svg');
+    --LeftAngle_lineItemImg: url('img/LeftAngleLine_ItemButtonLightBorder.png');
+    --RightAngle_lineItemImg: url('img/RightAngleLine_ItemButtonLightBorder.svg');
+    --MixedSquareItemImg: url('img/MixedSquareItemButtonLightBorder.svg');
+    --EmptyItemImg: url('img/EmptyItemButton.svg');
+    --DestroyImageButton: url('img/DestroyImageButton.svg');
+
 }
 .mainBGImg{
     background-image: var(--StartBG);

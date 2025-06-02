@@ -58,3 +58,25 @@
   background-color: var(--BtnPrimaryRestyleLight);
   /* border-radius: 50px; */
 }
+
+#MainMenuBtn{
+  /* transition-duration: 3s; */
+}
+#MainMenuBtn:hover{
+  /* transition-duration: 3s; */
+  outline: 2px solid white;
+  /* background-color: #173746 !important; */
+
+  background: url('img/ArrowBottomWhite.png'), #173746 !important ; 
+  background-size: 20px, cover !important; background-position: center, center !important; 
+  background-repeat: no-repeat, no-repeat !important;
+}
+#MainMenuBtn:active{
+  /* transition-duration: 3s; */
+  outline: 2px solid white;
+  /* background-color: #173746 !important; */
+
+  background: url('img/ArrowBottomWhite.png'), #173746 !important ; 
+  background-size: 20px, cover !important; background-position: center, center !important; 
+  background-repeat: no-repeat, no-repeat !important;
+}
